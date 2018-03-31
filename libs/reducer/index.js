@@ -6,3 +6,6 @@ export const setListValue = (prop, value) => (s) => {
 export function getPropValue(state, reducer, prop) {
   return state.get(reducer).get(prop);
 }
+
+const applyFn = (state, fn) => fn(state);
+export const pipe = (fns, state) => state.withMutations(s => fns.reduce(applyFn, s));
