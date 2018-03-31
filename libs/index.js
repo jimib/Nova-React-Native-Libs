@@ -1,4 +1,4 @@
 module.exports = {
-	reducer : require('./reducer'),
+	mutator : require('./mutator'),
 	store : require('./store')
 }
